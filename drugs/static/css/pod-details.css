@@ -1,0 +1,592 @@
+@import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
+body {
+    font-family: 'Poppins', sans-serif !important;
+    background-color: #edfaff !important;
+}
+
+main {
+    position: relative;
+}
+
+aside {
+    background-color: #fff;
+    height: 100vh;
+    transition: 0.5s;
+    text-align: center;
+    z-index: 99;
+    width: 10%;
+    padding: 2rem;
+    position: sticky;
+    top: 0;
+}
+
+aside.open {
+    padding: 2rem 4rem 2rem 6rem;
+    width: 25%;
+}
+
+aside a.logo {
+    display: block;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 2rem;
+}
+
+aside ul li {
+    margin-bottom: 2rem;
+}
+
+aside ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 32px;
+    margin: 0 auto;
+    /* color: #219EBC; */
+    color: #156578;
+    text-decoration: none;
+    transition: 0.3s all;
+    overflow: hidden;
+}
+
+aside ul li a.open {
+    width: 100%;
+    margin: 0;
+    text-align: start;
+    overflow: visible;
+}
+
+aside ul li a.active {
+    color: #023047;
+    font-weight: 600;
+}
+
+aside ul li a:hover {
+    color: #023047;
+    font-weight: 600;
+}
+
+aside ul li a:hover svg path {
+    fill: #023047;
+}
+
+aside button {
+    background-color: transparent;
+    border: none;
+    outline: 0;
+    margin-top: 2rem;
+}
+
+aside button svg {
+    color: #125a6c;
+    font-size: 22px;
+}
+
+aside button.close svg {
+    color: red;
+}
+
+article {
+    width: 85%;
+    min-height: 100vh;
+    transition: 0.5s;
+}
+
+aside.open~article {
+    width: 70%;
+}
+article nav{
+    position: sticky !important;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+}
+article nav .controls button{
+    border: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+}
+article nav .controls button[disabled] svg{
+    color: #7B7B7B;
+}
+
+article form .search{
+    border: 0;
+    outline: 0;
+    padding: 10px 20px;
+    width: 400px;
+    border-radius: 41px;
+    padding-left: 50px;
+}
+article form .search::placeholder{
+    color: #767676;
+    font-weight: 600;
+}
+article form .search-btn{
+    border: 0;
+    background: transparent;
+    padding: 0;
+    position: absolute;
+    left: 12px;
+    top: 10px;
+}
+
+article nav .dropdown button,
+article nav .dropdown button:hover,
+article nav .dropdown button:focus{
+    background-color: #01143C;
+    border-radius: 33px;
+    padding-left: 50px;
+    box-shadow: unset;
+    border: 0;
+    height: 38px;
+}
+article nav .dropdown img{
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    position: absolute;
+}
+article nav .dropdown ul{
+    background-color: #2E4777F0;
+    right: 0;
+    left: unset !important;
+    width: 12rem;
+}
+article nav .dropdown ul a{
+    color: #fff;
+}
+
+article header {
+    width: 100%;
+    height: 375px;
+    background-color: white;
+    background-image: url(../img/podcast-bg.png);
+    background-size: cover;
+    background-position: 50%;
+    margin-top: 10px;
+    position: relative;
+    border-radius: 16px;
+}
+article header{
+    position: sticky;
+    top: 60px;
+    z-index: 9999;
+}
+
+article header div {
+    color: #fff;
+    /* text-align: center; */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+article header div img{
+    width: 150px;
+}
+article header .play {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    background-color: #699BF7;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+
+article header .play svg {
+    font-size: 30px;
+    color: white;
+}
+
+article header div p:first-child {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+article header div h2{
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+article header div p:last-child {
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+article .podcasts-cont .podcast a{
+    text-decoration: none;
+    color: #023047;
+}
+article .podcasts-cont .podcast a h3{
+    font-weight: 700;
+    font-size: 32px;
+}
+article .podcasts-cont .podcast .cases{
+    /* display: flex; */
+    gap: 10px;
+}
+article .podcasts-cont .podcast .case{
+    background-color: white;
+    padding: 15px 35px;
+    border-radius: 15px;
+    width: calc((100% / 4) - 10px);
+    text-align: center;
+    position: relative;
+}
+article .podcasts-cont .podcast .case h4{
+    font-weight: 700;
+    text-align: start;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+article .podcasts-cont .podcast .case .play{
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    background-color: #699BF7;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+article .podcasts-cont .podcast .case .play svg{
+    font-size: 30px;
+    color: white;
+}
+
+main button.toggle-nav {
+    background: linear-gradient(326.42deg, #0096EA 10.57%, #00D1FF 154.06%);
+    color: white;
+    position: fixed;
+    bottom: 40px;
+    left: -55px;
+    border: 0;
+    z-index: 9;
+    padding-left: 55px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.music-player {
+    --primary-color: #ddd;
+    --secondary-color: #999;
+    --green-color: #2d5;
+    --padding: 1em;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    height: 7rem;
+    padding: var(--padding);
+    color: var(--primary-color);
+}
+
+.music-player svg {
+    color: var(--secondary-color);
+}
+
+.music-player svg:hover {
+    color: var(--primary-color);
+}
+
+.song-bar {
+    position: absolute;
+    left: var(--padding);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    width: 25%;
+}
+
+.song-infos {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.image-container {
+    --size: 4.5em;
+    flex-shrink: 0;
+    width: var(--size);
+    height: var(--size);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.song-description p {
+    margin: 0.2em;
+}
+
+.title,
+.artist {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.title:hover,
+.artist:hover {
+    text-decoration: underline;
+}
+
+.artist {
+    color: var(--secondary-color);
+}
+
+.icons {
+    display: flex;
+    gap: 1em;
+}
+
+.progress-controller {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    color: var(--secondary-color);
+}
+
+.control-buttons {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.play-pause {
+    display: inline-block;
+    padding: 1em;
+    background-color: var(--primary-color);
+    color: #111 !important;
+    border-radius: 50%;
+}
+
+.play-pause:hover {
+    transform: scale(1.1);
+    color: #111;
+}
+
+.progress-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.progress-bar {
+    height: 4px;
+    border-radius: 10px;
+    width: 30%;
+    background-color: #ccc4;
+}
+
+.progress {
+    position: relative;
+    height: 100%;
+    width: 30%;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+}
+
+.progress-bar:hover .progress {
+    background-color: var(--green-color);
+}
+
+.progress-bar:hover .progress::after {
+    content: "";
+    position: absolute;
+    --size: 1em;
+    width: var(--size);
+    height: var(--size);
+    right: 0;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    transform: translate(50%, calc(2px - 50%));
+}
+
+.other-features {
+    position: absolute;
+    right: var(--padding);
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.volume-bar {
+    display: flex;
+    align-items: center;
+    gap: .7em;
+}
+
+.volume-bar .progress-bar {
+    width: 6em;
+}
+
+.volume-bar .progress-bar:hover .progress::after {
+    --size: .8em;
+}
+
+
+
+
+@media (width <=767px) {
+    aside {
+        padding: 2rem 1rem;
+        width: 20%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99999;
+    }
+
+    aside.open {
+        width: 50%;
+        /* left: -100%; */
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    aside.close {
+        left: -100%
+    }
+
+    article {
+        width: 100%;
+        padding: 0 1.5rem;
+    }
+
+    aside.open~article {
+        width: 100%;
+    }
+
+    article form .search {
+        width: 100%;
+    }
+
+    article header div {
+        padding: 15px;
+    }
+    article header div h2 {
+        font-size: 20px;
+    }
+    article header .play {
+        bottom: 20px;
+        right: 10px;
+    }
+    article .podcasts-cont .podcast .cases {
+        flex-wrap: wrap;
+    }
+
+    article .podcasts-cont .podcast .case {
+        padding: 15px;
+        width: calc((100% / 2) - 10px);
+    }
+
+    article .podcasts-cont .podcast .case h4 {
+        text-align: center;
+        padding-left: 0;
+    }
+    article .podcasts-cont .podcast .case .play {
+        bottom: 40px;
+        right: 15px;
+        width: 30px;
+        height: 30px;
+    }
+
+    article .podcasts-cont .podcast .case .play svg {
+        font-size: 15px;
+    }
+    .music-player {
+        flex-direction: column;
+        height: auto;
+    }
+    .progress-controller{
+        margin-bottom: 1rem;
+    }
+    .other-features,
+    .progress-controller {
+        position: static;
+        width: 100%;
+        margin-top: 1em;
+    }
+    .other-features{
+        justify-content: space-evenly;
+    }
+    .song-bar {
+        position: static;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+@media (768px <=width <=995px) {
+    aside {
+        padding: 2rem;
+        width: 15%;
+    }
+
+    aside.open {
+        width: 30%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    aside.close {
+        left: -100%
+    }
+
+    article {
+        width: 80%;
+    }
+
+    aside.open~article {
+        width: 65%;
+    }
+    article .podcasts-cont .podcast .case{
+        width: calc((100% /3 ) - 10px);
+    }
+    article .podcasts-cont .podcast .case .play {
+        bottom: 40px;
+        right: 15px;
+        width: 30px;
+        height: 30px;
+    }
+
+    article .podcasts-cont .podcast .case .play svg {
+        font-size: 15px;
+    }
+    
+}

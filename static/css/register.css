@@ -1,0 +1,214 @@
+body {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+main {
+    background-color: #37B3FF;
+    background-image: linear-gradient(#36B3FF, #15A5E8, #1750AC, #0D3068);
+    min-height: 100vh;
+    position: relative;
+}
+
+main aside {
+    overflow: hidden;
+}
+
+main aside svg.top {
+    position: absolute;
+    width: 300px;
+    top: -70px;
+}
+main aside svg.top-right {
+    position: absolute;
+    width: 200px;
+    right: 0;
+    top: -60px;
+}
+
+main aside svg.bot {
+    position: absolute;
+    width: 200px;
+    bottom: -50px;
+}
+main aside svg.bot-right {
+    position: absolute;
+    width: 150px;
+    right: 0;
+    bottom: -50px;
+}
+
+main>div {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+}
+
+main div h2 {
+    color: #36B3FF;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+main div form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+main div form .form-con {
+    position: relative;
+    margin: 25px 0;
+}
+
+main div form .form-con label {
+    position: absolute;
+    background-color: #fff;
+    color: #165AB3;
+    font-weight: 700;
+    font-size: 14px;
+    top: -10px;
+    left: 20px;
+}
+
+main div form .form-con input {
+    /* color: #A9A9A9; */
+    width: 100%;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px #A9A9A9 solid;
+    outline: none;
+    padding: 15px 0 15px 30px;
+}
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear
+{
+    display: none;
+}
+main div form .InFname , main div form .InLname{
+    padding-left: 15px !important;
+}
+main div form .InPhone{
+    padding-left: 75px !important;
+}
+main div form .form-con .ph-code{
+    color: #165AB3;
+    position: absolute;
+    left: 30px;
+    top: 14px;
+}
+main div form .form-con > i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #165AB3;
+}
+main div form .form-con .key-off {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+main div form .form-con .key-off i {
+    font-size: 18px;
+    color: #165AB3;
+}
+main div form .form-con input::placeholder {
+    color: #A9A9A9;
+    font-size: 14px;
+}
+
+main div form button {
+    background-color: #36B3FF;
+    background-image: linear-gradient(-175deg, #36B3FF, #15A5E8, #1750AC, #0D3068);
+    color: #fff;
+    width: 100%;
+    font-weight: 700;
+    border: 0;
+    border-radius: 12px;
+    padding: 12px 0;
+}
+
+main div p {
+    color: #6F6F6F;
+    font-size: 15px;
+}
+main .or-cont{
+    margin: 35px 0;
+}
+main div .or {
+    background-color: #fff;
+    color: #6F6F6F;
+    font-size: 25px;
+    font-weight: lighter;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 15px;
+}
+
+main div ul li {
+    margin-bottom: 15px;
+}
+
+main div ul li a {
+    color: black;
+    background-color: #F6F6F6;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px 25px;
+}
+
+main div ul li:nth-child(2) a,
+main div ul li:last-child a {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+main div ul li a svg {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+@media (min-width:320px) and (max-width:599px) {
+    main {
+    min-height: 100vh;
+    }
+    main>div {
+        border-radius: 0;
+        padding: 4rem 1rem;
+        width: 100%;
+    }
+
+    main div form {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    main div ul li a {
+        font-size: 14px;
+        padding: 10px 25px;
+    }
+
+    main div ul li:nth-child(2) a,
+    main div ul li:last-child a {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    main div ul li a svg {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+    }
+
+}
